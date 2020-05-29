@@ -1,0 +1,22 @@
+.wrapper {
+  margin: auto;
+}
+
+.toolbar {
+  width: 100%;
+  background: aliceblue
+}
+
+.toolbar a {
+  text-align: center;
+  padding: 5px 5px;
+}
+
+.toolbar a:hover {
+  background-color: black
+}
+
+#canvas {
+  width: 100%;
+  border: 1px solid black;
+}
