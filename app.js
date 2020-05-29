@@ -18,11 +18,16 @@ window.addEventListener("load", () => {
     if (!drawing) return;
     context.lineWidth = 5;
     context.lineCap = 'round';
+    context.strokeStyle = `${document.querySelector("#colorPicker").value}`;
 
-    context.lineTo(e.clientX, e.clientY);
+    // Draws a line from the current drawing position to the position specified by x and y
+    context.lineTo(e.layerX, e.layerY);
+    // Draws the shape
     context.stroke();
+    // Creates a new path
     context.beginPath();
-    context.moveTo(e.clientX, e.clientY);
+    // Moves the pen to the coordinates specified by x and y
+    context.moveTo(e.layerX, e.layerY);
   }
 
   canvas.addEventListener('mousedown', startPosition)
