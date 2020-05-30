@@ -1,6 +1,9 @@
+let canvas;
+let context;
+
 window.addEventListener("load", () => {
-  const canvas = document.querySelector("#canvas");
-  const context = canvas.getContext('2d');
+  canvas = document.querySelector("#canvas");
+  context = canvas.getContext('2d');
 
   let drawing = false;
 
@@ -34,3 +37,7 @@ window.addEventListener("load", () => {
   canvas.addEventListener('mouseup', stopPosition)
   canvas.addEventListener('mousemove', draw)
 })
+
+function clearCanvas() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
