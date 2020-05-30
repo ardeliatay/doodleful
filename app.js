@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
     if (!drawing) return;
     context.lineWidth = 5;
     context.lineCap = 'round';
-    context.strokeStyle = `${document.querySelector("#colorPicker").value}`;
+    context.strokeStyle = document.querySelector("#colorPicker").value;
 
     // Draws a line from the current drawing position to the position specified by x and y
     context.lineTo(e.layerX, e.layerY);
